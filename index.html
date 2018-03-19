@@ -4,17 +4,96 @@
     <title>The AJAXson 5</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
+    <style>
+        body {
+            margin: auto;
+            width: 70%;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .title {
+            background-color: lightgrey;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+
+        .form {
+            background-color: lightgrey;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 30px;
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+        input{
+            display: inline-block;
+        }
+
+        .border {
+            border: 1px solid grey;
+            padding: 1px;
+            margin-left: -5px;
+        }
+
+        .button-area {
+            margin: auto;
+            margin-top: 30px;
+            padding: 0;
+            
+        }
+
+        .image-center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+            width: 95%;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
+    <div>
+        <h1 class="title">The AJAXson 5</h1>
+    </div>
 
     <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text"/>
-        <input type="submit" value="Get my Gif!" />
+        <div class="form">
+            <label class="bold">What kind of Jackson 5 related gif do you want?</label><br>
+            <input name="tag" type="text"/>
+        </div>
+        <div class="form">
+            <label class="bold">Prove you are not a robot by answering this riddle:</label><br>
+                <input name="riddle" type="text"/>
+                <label class="border">Jacksons are better than 1</label>
+                <span id = "riddle-error" class="error"></span>
+        </div>
+        <div class="button-area">
+            <input type="submit" value="Get my Gif!" />
+        </div>
     </form>
 
-    <img id="gif" src="" hidden="true"/>
+    <img class="image-center" id="gif" src="" hidden="false"/>
     <p id="feedback" hidden="true`"></p>
 
 </body>
